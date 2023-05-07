@@ -97,7 +97,7 @@ CREATE TABLE `startup` (
   -- founded year, documents link, target, min subscription, Valuation Cap, youtube link --
   `founded` varchar(100)  DEFAULT '2020',
   `documents` varchar(255)  DEFAULT 'https://tyke-startup-bucket.s3.ap-south-1.amazonaws.com/PRISTLE%20PRODUCTS%20PRIVATE%20LIMITED/CERTIFICATE%20OF%20INCORPORATION%20-%20Robin%20Chopra.PDF',
-  `youtube` varchar(255)  DEFAULT 'https://www.youtube.com/watch?v=td6PKkkxQC4&embeds_euri=https%3A%2F%2Ftykeinvest.com%2F&source_ve_path=MjM4NTE&feature=emb_title',
+  `youtube` varchar(255)  DEFAULT 'https://www.youtube.com/embed/td6PKkkxQC4',
   `target` int(11)  DEFAULT '100000',
    `min_subscription` int(11)  DEFAULT '500',
    `valuation_cap` int(11)  DEFAULT '100000'

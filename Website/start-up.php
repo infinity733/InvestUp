@@ -31,6 +31,7 @@
             while($row = mysqli_fetch_array($getStartup)){
           ?>
           <div class="col-4 <?php echo $row['type']; ?>">
+          <a style="color: inherit;" href="startup-details.php?startup=<?php echo $row['id']; ?>">
             <div class="card" style="margin:1vw;">
               <img src="../Admin/<?php echo $row['image']; ?>" class="card-img-top" alt="..." style="height:14vw;">
               <div class="card-body">
@@ -51,6 +52,7 @@
                 <?php } ?>
               </div>
             </div>
+                </a>
           </div>
           <?php } ?>
           <!-- <div class="col-4 fintech">
