@@ -8,9 +8,9 @@ session_start();
 
 
 if($_SESSION['type'] == 'Investor'){
-  echo "<script>window.location='investor-dashboard.php';</script>";
+  echo "<script>window.location='investment.php';</script>";
 }else if($_SESSION['type'] == 'Founder'){
-  echo "<script>window.location='founder-dashboard.php';</script>";
+  echo "<script>window.location='my-startup.php';</script>";
 }
 
 ?>

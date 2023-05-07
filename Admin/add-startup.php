@@ -41,7 +41,7 @@ $type = $row['type'];
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+      <a class="navbar-brand m-0" href=" http://localhost/investup/Website/ ">
         <img src="assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">InvestUp</span>
       </a>
@@ -49,12 +49,12 @@ $type = $row['type'];
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white " href="founder-dashboard.php">
+      <li class="nav-item">
+          <a class="nav-link text-white active bg-gradient-primary">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">dashboard</i>
+            <i class="material-icons opacity-10">person</i>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1"><?php echo $_SESSION['user_email'] ?></span>
           </a>
         </li>
         <li class="nav-item">
@@ -160,9 +160,49 @@ $type = $row['type'];
                                 <div class="col-md-12">
                                     <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Startup Description :</label>
                                     <div class="input-group input-group-outline my-3">
-                                        <textarea class="form-control" name="description" required><?php echo $description; ?>"</textarea>
+                                        <textarea class="form-control" name="description" required placeholder="Enter Startup Description"><?php echo $description; ?></textarea>
                                     </div>
                                 </div>
+                                <!-- founded year, documents link, target, min subscription, Valuation Cap, youtube link -->
+                                <div class="col-md-12">
+                                    <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Founded on :</label>
+                                    <div class="input-group input-group-outline my-3">
+                                        <input type="text" class="form-control" name="founded" required placeholder="Enter Founded Year" value="<?php echo $founded_year; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Documents :</label>
+                                    <div class="input-group input-group-outline my-3">
+                                        <input type="url" class="form-control" name="documents" required placeholder="Enter Documents Link" value="<?php echo $documents; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Youtube Link :</label>
+                                    <div class="input-group input-group-outline my-3">
+                                        <input type="url" class="form-control" name="youtube" required placeholder="Enter Youtube Link" value="<?php echo $documents; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Target :</label>
+                                    <div class="input-group input-group-outline my-3">
+                                        <input type="number" class="form-control" name="target" required placeholder="Enter Target" value="<?php echo $target; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Min Subscription :</label>
+                                    <div class="input-group input-group-outline my-3">
+                                    <input type="number" class="form-control" name="min_subscription" required placeholder="Enter Min Subscription" value="<?php echo $min_subscription; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" style="font-weight:bold; font-size:1.7vw;">Valuation Cap  :</label>
+                                    <div class="input-group input-group-outline my-3">
+                                    <input type="number" class="form-control" name="valuation_cap" required placeholder="Enter Valuation Cap" value="<?php echo $valuation_cap; ?>">
+                                    </div>
+                                </div>
+                                        
+
+
                                 <div class="col-md-6" style="margin:0 auto;">
                                   <?php if (isset($_GET['id']) && $_GET['id']!="") { ?>
                                       <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2" name="update">Update</button>
